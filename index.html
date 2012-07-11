@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Video Test</title>
+<script src="jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<video id="video1" autobuffer height="240" width="360">
+<source src="BigBuck.m4v">
+<source src="BigBuck.webm" type="video/webm">
+<source src="BigBuck.theora.ogv" type="video/ogg">
+</video>
+<a href="#" id="play1">Play</a>
+<script type="text/javascript"><!--
+(function($) {
+	$(function () {
+		var video1 = $('#video1');
+		video1.on('click', function() {
+			video1[0].play();
+		});
+		$('#play1').on('click', function() {
+			video1[0].play();
+		});
+	});
+})(jQuery);
+jQuery.noConflict();
+// -->
+</script>
+</body>
+</html>
